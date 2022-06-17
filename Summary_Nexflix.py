@@ -3,9 +3,10 @@
 """
 Created on Wed Jun 15 09:17:10 2022
 
-@author: dayan
+@author: dayan alzate hernandez
+Id:000502226
 """
-
+# importamos las libreria necesarias 
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn import linear_model
@@ -16,6 +17,7 @@ from sklearn.metrics import r2_score
 #selecicionamos el archivo csv para convertirlo en un data frame 
 netflix =  pd.read_csv('netflix_titles.csv')
 
+#convermitos os datos de tiempo a numericos 
 netflix["duracion"] = pd.to_numeric(netflix['duration'].replace('([^0-9]*)','', regex=True), errors='coerce')
 
 # Variables independiente
@@ -32,12 +34,13 @@ scale_x_netflix =(x_netflix-x_netflix.mean())/x_netflix.std()
 
 
 
-#Train / Test
+#Train / Test 
+# datos de entrenamientos 
 train_x_netflix = scale_x_netflix[:800]
 train_y_netflix = y_netflix[:800]
 
 
-
+# datos de prueba 
 test_x_netflix = scale_x_netflix[800:]
 test_y_netflix = y_netflix[800:]
 

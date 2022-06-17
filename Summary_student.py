@@ -3,9 +3,11 @@
 """
 Created on Wed Jun 15 09:07:26 2022
 
-@author: dayan
+@author: dayan alzate hernandez
+Id:000502226
 """
 
+#importamos las librerias 
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn import linear_model
@@ -15,8 +17,9 @@ from sklearn.metrics import r2_score
 
 ## convertimos el archivo csv en un data frame 
 df= pd.read_csv('student_data.csv')
-
+# creamos x y definimos las variables independiente 
 x = df[['age','famrel']]
+# cramos y y definimos la variables dependiente 
 y = df[['traveltime']]
 
 

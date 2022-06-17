@@ -3,7 +3,8 @@
 """
 Created on Wed Jun 15 09:17:10 2022
 
-@author: dayan
+@author: dayan alzate hernandez
+Id:000502226
 """
 
 #Librerias incluidas
